@@ -2,25 +2,25 @@ let handler = async (m, { conn, usedPrefix, command}) => {
       let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
       if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`;
     
-      let pp = './Guru.jpg';
+      let pp = 'https://i.hizliresim.com/4dqv9lw.jpg';
       let more = String.fromCharCode(8206);
       let readMore = more.repeat(850); 
     
       let lkr;
       switch (command) {
         case 'list':
-lkr = "*Get ready for the ride, here are your ticket options:*\n\n" +
-"🤖 *" + usedPrefix + "botmenu* - The Bot's secret control panel. What's your command, oh great one?\n\n" +
-"👑 *" + usedPrefix + "ownermenu* - The sacred scroll only for the chosen one. Yep, that's you, Boss!\n\n" +
-"🧑‍🤝‍🧑 *" + usedPrefix + "groupmenu* - Group shenanigans central! Unite, chat, conquer!\n\n" +
-"📥 *" + usedPrefix + "dlmenu* - 'DL' stands for 'Delicious Loot'. Come grab your goodies!\n\n" +
-"🎉 *" + usedPrefix + "funmenu* - The bot's party hat. Games, jokes and instant ROFLs. Let's get this party started!\n\n" +
-"💰 *" + usedPrefix + "economymenu* - Bling bling! Your personal vault of virtual economy. Spend or save? Choose wisely!\n\n" +
-"🎮 *" + usedPrefix + "gamemenu* - Enter the gaming arena. May the odds be ever in your favor!\n\n" +
-"🎨 *" + usedPrefix + "stickermenu* - A rainbow of stickers for your inner artist. Make your chats pop!\n\n" +
-"🧰 *" + usedPrefix + "toolmenu* - Your handy-dandy toolkit. What's your pick, genius?\n\n" +
-"🎩 *" + usedPrefix + "logomenu* - Create a logo that screams YOU. Or whispers. You choose the volume.\n\n" +
-"🌙 *" + usedPrefix + "nsfwmenu* - The After Dark menu. But remember, sharing adult secrets must be consent-based.";
+lkr = "*Yolculuğa hazır olun, işte bilet seçenekleriniz:*\n\n" +
+"🤖 *" + usedPrefix + "botmenu* - Bot'un gizli kontrol paneli. Emrin ne, ah harika olan?\n\n" +
+"👑 *" + usedPrefix + "ownermenu* - Kutsal tomar yalnızca seçilen kişi içindir. Evet, bu sensin, Patron!\n\n" +
+"🧑‍🤝‍🧑 *" + usedPrefix + "groupmenu* - Grup maskaralıkları merkezi! Birleşin, sohbet edin, fethedin!\n\n" +
+"📥 *" + usedPrefix + "dlmenu* - 'DL', 'Lezzetli Ganimet' anlamına gelir. Gelin, güzelliklerinizi alın!\n\n" +
+"🎉 *" + usedPrefix + "funmenu* - Botun parti şapkası. Oyunlar, şakalar ve anlık ROFL'ler. Hadi bu partiyi başlatalım!\n\n" +
+"💰 *" + usedPrefix + "economymenu* - Pırıl pırıl! Kişisel sanal ekonomi kasanız. Harcamak mı yoksa tasarruf etmek mi? Akıllıca seçim!\n\n" +
+"🎮 *" + usedPrefix + "gamemenu* - Oyun alanına girin. Şans sonsuza dek sizinle olsun!\n\n" +
+"🎨 *" + usedPrefix + "stickermenu* - İçinizdeki sanatçı için gökkuşağı çıkartmaları. Sohbetlerinizi canlı hale getirin!\n\n" +
+"🧰 *" + usedPrefix + "toolmenu* - Kullanışlı züppe araç takımınız. Senin seçimin hangisi, dahi?\n\n" +
+"🎩 *" + usedPrefix + "logomenu* - SİZİ haykıran bir logo yaratın. Veya fısıldıyor. Sesi siz seçersiniz.\n\n" +
+"🌙 *" + usedPrefix + "nsfwmenu* - Karanlıktan Sonra menüsü. Ancak yetişkinlerin sırlarını paylaşmanın rızaya dayalı olması gerektiğini unutmayın.";
 break;
 
           
