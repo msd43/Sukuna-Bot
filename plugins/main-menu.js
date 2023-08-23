@@ -37,34 +37,29 @@ let quote = quotes[Math.floor(Math.random() * quotes.length)];
 
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `
-🚀 *_Buckle up ${name}, ${greeting}! We're going on an adventure!_* 🚀
+🚀 *_${name}'in kemerini bağla, ${greeting}! Bir maceraya çıkıyoruz_* 🚀
 
-📜 *_Quote of the day: ${quote}_* 📜
+📜 *_Günün Sözü: ${quote}_* 📜
 
-┏━💼 _User Info:_ 💼━┓
-┃ 👾  *User Tag:* ${taguser} 
-┃ 🎩  *Name:* ${name} 
-┃ 🦸  *Master Mind:* ${author} 
-┃ 💎  *Diamonds:* ${diamond} 
+┏━💼 _Kullanıcı Bilgi:_ 💼━┓
+┃ 👾  *Kullanıcı Tag:* ${taguser} 
+┃ 🎩  *Nick:* ${name} 
+┃ 🦸  *Yapımcı:* ${author} 
+┃ 💎  *Elmaslar:* ${diamond} 
 ┃ 🏆  *Rank:* ${role}
 ┃ 🎮  *XP:* ${exp} 
 ┗━━━━━━━━━━━┛
 
-┏━━⏰ _Today's Sauce!_ ⏰━┓
-┃ 📆  *Today's Date:* ${date} 
-┃ ⏲️  *Current Time:* ${wib} 
-┗━━━━━━━━━━━━━┛
-
-┏━━🤖 _BOT STATUS:_🤖━━┓
-┃ 🤡  *Bot Name:* ${botname} 
+┏━━🤖 _BOT DURUM:_🤖━━┓
+┃ 🤡  *Bot İsim:* ${botname} 
 ┃ 💻  *Platform:* Linux 
-┃ 📣  *Prefix:* ${usedPrefix} 
-┃ 🕓  *Uptime:* ${uptime}
-┃ 💌  *Database:* ${rtotalreg} of ${totaluser} 
-┃ 📚  *Total Users:* ${totaluser} 
+┃ 📣  *Önek:* ${usedPrefix} 
+┃ 🕓  *Çalışma Süresi:* ${uptime}
+┃ 💌  *Veri Tabanı:* ${rtotalreg} of ${totaluser} 
+┃ 📚  *Toplam Kullanıcı:* ${totaluser} 
 ┗━━━━━━━━━━━━━┛
 
-💡 *_Remember, when in doubt, use ${usedPrefix}list. It's like my magic spell book!_* 💡
+💡 *_Şüpheye düştüğünüzde ${usedPrefix}list'i kullanmayı unutmayın. Sanki büyü kitabım gibi!_* 💡
 `
 
 
@@ -85,9 +80,9 @@ function clockString(ms) {
     
     function ucapan() {
       const time = moment.tz('Asia/Kolkata').format('HH')
-      let res = "happy early in the day☀️"
+      let res = "günün erken saatlerinde mutlu☀️"
       if (time >= 4) {
-        res = "Good Morning 🌄"
+        res = "Günaydın Gak Gali Sabah Oldu 🌄"
       }
       if (time >= 10) {
         res = "Good Afternoon ☀️"
@@ -96,30 +91,30 @@ function clockString(ms) {
         res = "Good Afternoon 🌇"
       }
       if (time >= 18) {
-        res = "Good Night 🌙"
+        res = "İyi Geceler Yat Zıba Gali Geç Oldu🌙"
       }
       return res
     }
     const quotes = [
-      "I'm not lazy, I'm just on my energy saving mode.",
-      "Life is short, smile while you still have teeth.",
-      "I may be a bad influence, but darn I am fun!",
-      "वक्त हमे बहुत कुछ सिखा देता है, खासकर तब जब हमारे पास वक्त नहीं होता।",
-      "जिंदगी एक किताब की तरह होती है, हर दिन नया पन्ना बदलता है। कभी हंसते हैं, कभी रोते हैं, पर हर किसी की कहानी अधूरी होती है!",
-      "पढ़ाई करो तो दिल लगता नही, दिल लगाओ तो दिमाग़ लगता नहीं।",
-      "दोस्ती इतनी गहरी करो की दिल में बस जाओ, ऐसे दोस्ती निभाओ की हमे भी तुम्हारे दोस्त होने पर नाज हो।",
-      "मेरे दोस्त तुम बहुत याद आते हो, जब भी भूख लगती है वो समोसे बहुत याद आते है।",
-      "जीवन का असली मज़ा तो तब आता है, जब दूसरे आपकी ज़िंदगी जीने की कोशिश करते हैं।",
-      "कुछ लोग तो इतने फालतू होते हैं, खुद की ज़िंदगी खुद ही नहीं जी पाते और दूसरों की ज़िंदगी में टांग अड़ा देते हैं।",
-      "I'm on a whiskey diet. I've lost three days already.",
-      "Why don't some couples go to the gym? Because some relationships don't work out.",
-      "I told my wife she should embrace her mistakes... She gave me a hug.",
-      "If I'm not back in five minutes, wait longer!",
-      "I asked my wife if I was the only one she's been with. She said, 'Yes, the others were nines and tens.'",
-      "Don’t worry if plan A fails, there are 25 more letters in the alphabet.",
-      "I'm great at multitasking. I can waste time, be unproductive, and procrastinate all at once.",
-      "You know you're getting old when you stoop to tie your shoelaces and wonder what else you could do while you're down there.",
-      "I'm so good at sleeping, I can do it with my eyes closed.",
-      "If you think nobody cares if you’re alive, try missing a couple of payments."
+      "Aşk, kalplerde yeşeren ve ruhlarda açan en güzel çiçektir.",
+      "Bilgi güçtür, ama bu gücü etik ve yasal sınırlar içinde kullanmak insanın erdemini yükseltir.",
+      "Sevda, suskunluğun en anlamlı hali ve sözlerin en derin anlamıdır.",
+      "Teknolojiyle sınırlar zorlamak yerine, insanlığın ilerlemesi ve güvenliği için çalışmalıyız.",
+      "Aşk, iki ruhun bir bedende yaşadığı büyülü bir deneyimdir.",
+      "Hack etmek yerine, becerilerimizi olumlu yollarla kullanarak dünyayı daha iyi bir yer haline getirebiliriz.",
+      "Sevgi, karşılık beklemeden verilen en değerli hediye ve hissettiren en güçlü dokunuştur.",
+      "İnternetin özgürlüğünü korumak, aynı zamanda sorumluluklarımızı da artırır.",
+      "Aşk, gözlerle görülmeyip kalple hissedilen en güzel manzaradır.",
+      "Bir bilgisayar korsanının gücü, etik değerlerle sınırlanmadığında en büyük tehdit olabilir.",
+      "Sevdaya düşmek, içinde kaybolmak değil, birlikte yükselmektir.",
+      "Yasalar toplumu düzenlemenin temel taşıdır; dijital dünyada da bu ilkeyi gözetmek zorundayız.",
+      "Aşk, her anı özel kılan sihirli bir zaman dilimidir.",
+      "Bir bilgisayar korsanı değil, bir etik hacker olun; zayıf noktaları bulup güvenliği artırmak için çaba sarf edin.",
+      "Sevgi, kelimelerle ifade edilemeyen ve yaşanarak anlaşılan bir sırdır.",
+      "Bilişim dünyasında gerçek başarı, bilginin paylaşılması ve toplumun faydasına kullanılmasında gizlidir.",
+      "Aşkın en güzel hali, sevilenin mutluluğunu kendi mutluluğundan üstün tutmaktır.",
+      "Dijital dünyada etik ve yasallık, gerçek dünyada olduğu kadar önemlidir.",
+      "Sevda, hayatın anlamını keşfetmek için atılan en cesur adımdır.",
+      "Geleceği şekillendirenler, siber uzayı güvenli ve adil kılanlardır; unutmayın ki her eylemin bir sonucu vardır."
     ]
     
