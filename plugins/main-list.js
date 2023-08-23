@@ -1,6 +1,6 @@
 let handler = async (m, { conn, usedPrefix, command}) => {
       let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
-      if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`;
+      if (!(who in global.db.data.users)) throw `✳️ Kullanıcı veritabanlarımda bulunamadıe`;
     
       let pp = 'https://i.hizliresim.com/4dqv9lw.jpg';
       let more = String.fromCharCode(8206);
@@ -29,7 +29,7 @@ break;
 
         case 'botmenu':
           lkr = `❀° ┄──•••───╮
-          𝘽𝙊𝙏 𝙈𝙀𝙉𝙐  
+            𝔹𝕆𝕋 𝕄𝔼ℕ𝕌  
    ╰───•••──┄ °❀     
    ┏━━━ʕ•㉨•ʔ━━━┓
    ⎪⌲👑 _${usedPrefix}gita_
@@ -49,7 +49,7 @@ break;
           break;
         case 'ownermenu':
           lkr = `❀° ┄──•••───╮
-          𝙊𝙒𝙉𝙀𝙍 𝙈𝙀𝙉𝙐  
+          𝕊𝔸ℍ𝕀ℙ 𝕄𝔼ℕ𝕌  
      ╰───•••──┄ °❀     
      ┏━━━ʕ•㉨•ʔ━━━┓
      ⎪⌲👑 _${usedPrefix}banchat_
@@ -68,7 +68,7 @@ break;
           break;
           case 'groupmenu':
           lkr = `❀° ┄──•••───╮
-          𝙂𝙍𝙊𝙐𝙋 𝙈𝙀𝙉𝙐 
+          𝔾ℝ𝕌ℙ 𝕄𝔼ℕ𝕌 
     ╰───•••──┄ °❀     
     ┏━━━ʕ•㉨•ʔ━━━┓
     ⎪⌲💎_${usedPrefix}kick *<@tag>*_
@@ -92,7 +92,7 @@ break;
           case 'downloadermenu':
             case 'dlmenu' :
           lkr = `❀° ┄──•••───╮
-          𝘿𝙇 𝙈𝙀𝙉𝙐 
+          𝔻𝕃 𝕄𝔼ℕ𝕌 
    ╰───•••──┄ °❀     
    ┏━━━ʕ•㉨•ʔ━━━┓
    ⎪⌲💎_${usedPrefix}play_
@@ -116,7 +116,7 @@ break;
           break;
           case 'economymenu':
           lkr = `❀° ┄──•••───╮
-          𝙀𝘾𝙊𝙉𝙊𝙈𝙔 
+          𝔼𝕂𝕆ℕ𝕆𝕄𝕀 
    ╰───•••──┄ °❀     
    ┏━━━ʕ•㉨•ʔ━━━┓
    ⎪⌲👑 _${usedPrefix}claim/daily_
@@ -140,7 +140,7 @@ break;
           break;
           case 'funmenu':
           lkr = `❀° ┄──•••───╮
-          𝙁𝙐𝙉 𝙈𝙀𝙉𝙐
+          𝔼𝔾𝕃𝔼ℕℂ𝔼 𝕄𝔼ℕ𝕌
     ╰───•••──┄ °❀     
     ┏━━━ʕ•㉨•ʔ━━━┓
     ⎪⌲👑 _${usedPrefix}character_
@@ -160,7 +160,7 @@ break;
           break;
           case 'animemenu':
           lkr = `❀° ┄──•••───╮
-          𝐴𝑁𝐼𝑀𝐸 𝑀𝐸𝑁𝑈
+          𝔸ℕ𝕀𝕄𝔼 𝕄𝔼ℕ𝕌
     ╰───•••──┄ °❀     
     ┏━━━ʕ•㉨•ʔ━━━┓
     ⎪⌲👑 _${usedPrefix}waifu_
@@ -205,7 +205,7 @@ break;
           break;
           case 'gamemenu':
           lkr = `❀° ┄──•••───╮
-          𝙂𝘼𝙈𝙀 𝙈𝙀𝙉𝙐 
+          𝕆𝕐𝕌ℕ 𝕄𝔼ℕ𝕌 
     ╰───•••──┄ °❀     
     ┏━━━ʕ•㉨•ʔ━━━┓
     ⎪⌲👑 _${usedPrefix}tictactoe_
@@ -221,7 +221,7 @@ break;
           break;
           case 'stickermenu':
           lkr = `❀° ┄──•••───╮
-          𝙎𝙏𝙄𝘾𝙆𝙀𝙍 𝙈𝙀𝙉𝙐
+          𝕊𝕋𝕀ℂ𝕂𝔼ℝ 𝕄𝔼ℕ𝕌
      ╰───•••──┄ °❀     
      ┏━━━ʕ•㉨•ʔ━━━┓
      ⎪⌲👑 _${usedPrefix}sticker_
@@ -242,7 +242,7 @@ break;
           break;
           case 'toolmenu':
           lkr = `❀° ┄──•••───╮
-          𝙏𝙊𝙊𝙇𝙎 𝙈𝙀𝙉𝙐
+          𝕋𝕆𝕆𝕃𝕃𝔸ℝ 𝕄𝔼ℕ𝕌𝕊𝕌
      ╰───•••──┄ °❀     
      ┏━━━ʕ•㉨•ʔ━━━┓
      ⎪⌲👑 _${usedPrefix}autosticker_
@@ -278,13 +278,13 @@ break;
      ┗━━━ʕ•㉨•ʔ━━━┛`; // 
           break;
           case 'nsfwmenu':
-          lkr = `use command ${usedPrefix}nsfw`; // 
+          lkr = `${usedPrefix}nsfw komutunu kullanın`; // 
           break;
           case 'logomenu':
-          lkr = `use ${usedPrefix}logo to see all options \ngfx cmd upto 12`; // 
+          lkr = `12'ye kadar \ngfx cmd tüm seçenekleri görmek için ${usedPrefix}logo'yu kullanın`; // 
           break;
         default:
-          lkr = `Invalid command. Type ${usedPrefix}list to see available options.`;
+          lkr = `Geçersiz komut. Kullanılabilir seçenekleri görmek için ${usedPrefix}list yazın.`;
       }
     
       conn.sendFile(m.chat, pp, 'perfil.jpg', lkr, m, false, { mentions: [who] });
