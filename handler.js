@@ -682,9 +682,9 @@ export async function participantsUpdate({ id, participants, action }) {
                   pp = await this.profilePictureUrl(user, 'image');
                   ppgp = await this.profilePictureUrl(id, 'image');
                 } catch (error) {
-                  console.error(`Error retrieving profile picture: ${error}`);
-                  pp = 'https://i.imgur.com/8B4jwGq.jpeg'; // Assign default image URL
-                  ppgp = 'https://i.imgur.com/8B4jwGq.jpeg'; // Assign default image URL
+                  console.error(`Profil resmi alınırken hata oluştu: ${error}`);
+                  pp = 'https://i.hizliresim.com/4dqv9lw.jpg'; // Assign default image URL
+                  ppgp = 'https://i.hizliresim.com/4dqv9lw.jpg'; // Assign default image URL
                 } finally {
                   let text = (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user')
                     .replace('@group', await this.getName(id))
@@ -701,16 +701,16 @@ export async function participantsUpdate({ id, participants, action }) {
                   )}&memberCount=${encodeURIComponent(
                     nthMember.toString()
                   )}&avatar=${encodeURIComponent(pp)}&background=${encodeURIComponent(
-                    'https://i.imgur.com/8B4jwGq.jpeg'
+                    'https://i.hizliresim.com/4dqv9lw.jpg'
                   )}`;
           
                   try {
                     let welcomeResponse = await fetch(welcomeApiUrl);
                     let welcomeBuffer = await welcomeResponse.buffer();
           
-                    this.sendFile(id, welcomeBuffer, 'welcome.png', text, null, false, { mentions: [user] });
+                    this.sendFile(id, welcomeBuffer, 'https://i.hizliresim.com/4dqv9lw.jpg', text, null, false, { mentions: [user] });
                   } catch (error) {
-                    console.error(`Error generating welcome image: ${error}`);
+                    console.error(`Hoş geldiniz resmi oluşturulurken hata oluştu: ${error}`);
                   }
                 }
               }
@@ -727,14 +727,14 @@ export async function participantsUpdate({ id, participants, action }) {
                   ppgp = await this.profilePictureUrl(id, 'image');
                 } catch (error) {
                   console.error(`Error retrieving profile picture: ${error}`);
-                  pp = 'https://i.imgur.com/8B4jwGq.jpeg'; // Assign default image URL
-                  ppgp = 'https://i.imgur.com/8B4jwGq.jpeg'; // Assign default image URL
+                  pp = 'https://i.hizliresim.com/4dqv9lw.jpg'; // Assign default image URL
+                  ppgp = 'https://i.hizliresim.com/4dqv9lw.jpg'; // Assign default image URL
                 } finally {
-                  let text = (chat.sBye || this.bye || conn.bye || 'HELLO, @user')
+                  let text = (chat.sBye || this.bye || conn.bye || 'MERHABA, @user')
                     .replace('@user', '@' + user.split('@')[0]);
           
                   let nthMember = groupMetadata.participants.length;
-                  let secondText = `Goodbye, our ${nthMember}th group member`;
+                  let secondText = `Elveda, ${nthMember}'ıncı grup üyemiz`;
           
                   let leaveApiUrl = `https://wecomeapi.onrender.com/leave-image?username=${encodeURIComponent(
                     await this.getName(user)
@@ -743,7 +743,7 @@ export async function participantsUpdate({ id, participants, action }) {
                   )}&memberCount=${encodeURIComponent(
                     nthMember.toString()
                   )}&avatar=${encodeURIComponent(pp)}&background=${encodeURIComponent(
-                    'https://i.imgur.com/8B4jwGq.jpeg'
+                    'https://i.hizliresim.com/4dqv9lw.jpg'
                   )}`;
           
                   try {
@@ -752,7 +752,7 @@ export async function participantsUpdate({ id, participants, action }) {
           
                     this.sendFile(id, leaveBuffer, 'leave.png', text, null, false, { mentions: [user] });
                   } catch (error) {
-                    console.error(`Error generating leave image: ${error}`);
+                    console.error(`İzin resmi oluşturulurken hata oluştu: ${error}`);
                   }
                 }
               }
@@ -783,14 +783,14 @@ export async function groupsUpdate(groupsUpdate) {
         if (!id) continue
         let chats = global.db.data.chats[id], text = ''
         if (!chats?.detect) continue
-        if (groupUpdate.desc) text = (chats.sDesc || this.sDesc || conn.sDesc || '```Description has been changed to```\n@desc').replace('@desc', groupUpdate.desc)
-        if (groupUpdate.subject) text = (chats.sSubject || this.sSubject || conn.sSubject || '```Subject has been changed to```\n@subject').replace('@subject', groupUpdate.subject)
-        if (groupUpdate.icon) text = (chats.sIcon || this.sIcon || conn.sIcon || '```Icon has been changed to```').replace('@icon', groupUpdate.icon)
-        if (groupUpdate.revoke) text = (chats.sRevoke || this.sRevoke || conn.sRevoke || '```Group link has been changed to```\n@revoke').replace('@revoke', groupUpdate.revoke)
-        if (groupUpdate.announce == true) text = (chats.sAnnounceOn || this.sAnnounceOn || conn.sAnnounceOn || '*Group has been closed!*')
-        if (groupUpdate.announce == false) text = (chats.sAnnounceOff || this.sAnnounceOff || conn.sAnnounceOff || '*Group has been open!*')
-        if (groupUpdate.restrict == true) text = (chats.sRestrictOn || this.sRestrictOn || conn.sRestrictOn || '*Group has been all participants!*')
-        if (groupUpdate.restrict == false) text = (chats.sRestrictOff || this.sRestrictOff || conn.sRestrictOff || '*Group has been only admin!*')
+        if (groupUpdate.desc) text = (chats.sDesc || this.sDesc || conn.sDesc || '```Açıklama şu şekilde değiştirildi:```\n@desc').replace('@desc', groupUpdate.desc)
+        if (groupUpdate.subject) text = (chats.sSubject || this.sSubject || conn.sSubject || '```Konu şu şekilde değiştirildi:```\n@subject').replace('@subject', groupUpdate.subject)
+        if (groupUpdate.icon) text = (chats.sIcon || this.sIcon || conn.sIcon || '```Simge şu şekilde değiştirildi:```').replace('@icon', groupUpdate.icon)
+        if (groupUpdate.revoke) text = (chats.sRevoke || this.sRevoke || conn.sRevoke || '```Grup bağlantısı şu şekilde değiştirildi:```\n@revoke').replace('@revoke', groupUpdate.revoke)
+        if (groupUpdate.announce == true) text = (chats.sAnnounceOn || this.sAnnounceOn || conn.sAnnounceOn || '*Grup kapatıldı!*')
+        if (groupUpdate.announce == false) text = (chats.sAnnounceOff || this.sAnnounceOff || conn.sAnnounceOff || '*Grup açıldı!*')
+        if (groupUpdate.restrict == true) text = (chats.sRestrictOn || this.sRestrictOn || conn.sRestrictOn || '*Grubun tüm katılımcıları oldu!*')
+        if (groupUpdate.restrict == false) text = (chats.sRestrictOff || this.sRestrictOff || conn.sRestrictOff || '*Grup yalnızca yönetici olarak kullanıldı!*')
         if (!text) continue
         await this.sendMessage(id, { text, mentions: this.parseMention(text) })
     }
@@ -808,11 +808,11 @@ export async function deleteUpdate(message) {
         if (chat.delete)
             return 
             await this.reply(msg.chat, `
-≡ deleted a message 
-┌─⊷  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀 
-▢ *Number :* @${participant.split`@`[0]} 
+≡ bir mesajı sildim
+┌─⊷  𝒮İ𝐿𝑀𝐸𝒴İ Ö𝒩𝐿𝐸𝑀𝐸
+▢ *NUMARA :* @${participant.split`@`[0]} 
 └─────────────
-TO DEACTIVE , PRESS 
+DEVRE DIŞI BIRAKMAK İÇİN BASIN
 */off antidelete*
 *.enable delete*
 `.trim(), msg, {
@@ -826,16 +826,16 @@ TO DEACTIVE , PRESS
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: '*ᴏɴʟʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ* • This command can only be used by the *Creator of the bot*',
-        owner: '*ᴏɴʟʏ ᴏᴡɴᴇʀ* • This command can only be used by the *Bot Owner',
-        mods: '*ᴏɴʟʏ ᴍᴏᴅᴇʀᴀᴛᴏʀ* •This function is only for *For Bot moderators*',
-        premium: '*ᴏɴʟʏ ᴘʀᴇᴍɪᴜᴍ* • This command is for *Premium members only',
-        group: '*ɢʀᴏᴜᴘ ᴄʜᴀᴛ* • This command can only be used in groups',
-        private: '*ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ* • This command can only be used in the *private chat of the Bot*',
-        admin: '*ᴏɴʟʏ ᴀᴅᴍɪɴ* • This command is only for *Group Admins*',
-        botAdmin: '*ᴏɴʟʏ ʙᴏᴛ ᴀᴅᴍɪɴ* • To use this command I must be *Admin!*',
-        unreg: '*ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ʀᴇɢɪsᴛᴇʀᴇᴅ ʏᴇᴛ* •  Sign in to use this feature Typing:\n\n*/reg name.age*\n\n📌Example : */reg GURU.20*', 
-        restrict: '*ʀᴇsᴛʀɪᴄᴛ* • This feature is *disabled*',
+        rowner: '*ᴏɴʟʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ* • Bu komut yalnızca *botun yaratıcısı* tarafından kullanılabilir',
+        sahip: '*ᴏɴʟʏ ᴏᴡɴᴇʀ* • Bu komut yalnızca *Bot Sahibi tarafından kullanılabilir',
+        mods: '*ᴏɴʟʏ ᴍᴏᴅᴇʀᴀᴛᴏʀ* •Bu işlev yalnızca *Bot moderatörleri içindir*',
+        premium: '*ᴏɴʟʏ ᴘʀᴇᴍɪᴜᴍ* • Bu komut yalnızca *Premium üyeler içindir',
+        grup: '*ɢʀᴏᴜᴘ ᴄʜᴀᴛ* • Bu komut yalnızca gruplarda kullanılabilir',
+        özel: '*ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ* • Bu komut yalnızca Botun *özel sohbetinde kullanılabilir*',
+        admin: '*ᴏɴʟʏ ᴀᴅᴍɪɴ* • Bu komut yalnızca *Grup Yöneticileri* içindir.',
+        botAdmin: '*ᴏɴʟʏ ʙᴏᴛ ᴀᴅᴍɪɴ* • Bu komutu kullanabilmek için *Yönetici!* olmalıyım',
+        unreg: '*ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ʀᴇɢɪsᴛᴇʀᴇᴅ ʏᴇᴛ* • Bu özelliği kullanmak için oturum açın Yazarak:\n\n*/reg name.age*\n\n📌Örnek: */reg MSD.25*',
+        kısıtlama: '*ʀᴇsᴛʀɪᴄᴛ* • Bu özellik *devre dışıdır*',
     }[type]
     if (msg) return m.reply(msg)
 }
