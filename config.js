@@ -7,13 +7,12 @@ import axios from 'axios'
 
 
 global.owner = [
-  ['918473959399', 'SUKUNA', true],
-  ['918822357603', 'GOJO', true], 
+  ['79619201711', 'MSD', true], 
   [''] 
 ] //Number of owners
 
-global.mods = ['918473959399','918822357603','918805226594','919370480532'] 
-global.prems = ['918473959399','918822357603','918805226594','919370480532']
+global.mods = ['79619201711'] 
+global.prems = ['79619201711']
 global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124']
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.keysxteammm = ['29d4b59a4aa687ca', '5LTV57azwaid7dXfz5fzJu', 'cb15ed422c71a2fb', '5bd33b276d41d6b4', 'HIRO', 'kurrxd09', 'ebb6251cc00f9c63']
@@ -47,19 +46,19 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.botname = '𝙎𝙪𝙠𝙪𝙣𝙖 𝘽𝙤𝙩'
+global.botname = 'MSD 𝘽𝙤𝙩'
 global.premium = 'true'
-global.packname = 'Sukuna┃ᴮᴼᵀ' 
-global.author = '𝘽𝙮: 𝙏𝙚𝙖𝙢 𝙒𝙝𝙖𝙩𝙨 𝘽𝙤𝙩' 
-global.igfg = '▢ Follow on Instagram\nhttps://www.instagram.com/xaps444\n' 
-global.dygp = 'https://chat.whatsapp.com/FWZwvQBG40pI4KyQ2lEdTr'
-global.fgsc = 'https://github.com/RSxGamerz/Sukuna-Bot' 
-global.fgyt = 'https://youtube.com/@motivation_in_quotes'
-global.fgpyp = 'https://youtube.com/@xcn_'
-global.fglog = 'https://raw.githubusercontent.com/Guru322/api/Guru/guru.jpg' 
+global.packname = 'MSD┃ᴮᴼᵀ' 
+global.author = '𝘽𝙮: MSD 𝙒𝙝𝙖𝙩𝙨 𝘽𝙤𝙩' 
+global.igfg = '▢ Developed By MSD\n' 
+global.dygp = 'https://chat.whatsapp.com/'
+global.fgsc = 'https://github.com/' 
+global.fgyt = 'https://youtube.com/'
+global.fgpyp = 'https://youtube.com/'
+global.fglog = 'https://raw.githubusercontent.com/' 
 
 
-global.wait = '*⌛ _Charging..._*\n*▰▰▰▱▱▱▱▱*'
+global.wait = '*⌛ _Yükleniyor..._*\n*▰▰▰▱▱▱▱▱*'
 global.rwait = '⌛'
 global.dmoji = '🤭'
 global.done = '✅'
